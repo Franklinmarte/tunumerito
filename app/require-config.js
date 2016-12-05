@@ -11,6 +11,8 @@
             'angular-route': 'bower_components/angular-route/angular-route'
             
 
+            
+
             // Local dependencies
            
         },
@@ -26,7 +28,7 @@
         }
     });
 
-   require(['angular','numeroApp','homeController'], function(angular) {
+   require(['angular'], function(angular) {
         require(['numeroApp'], function() {
             angular
                 .element(document)

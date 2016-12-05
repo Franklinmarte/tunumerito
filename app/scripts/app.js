@@ -44,19 +44,24 @@ angular
 })();
 */
 
-define('numeroApp', ['angular', 'angular-route'], function(angular) {
+define('numeroApp', ['angular', 'angular-route', 'homeController'], function(angular) {
     var numeroApp = angular.module('numeroApp', ['ngRoute']);
-    numeroApp.config(function($routeProvider, $controllerProvider, $compileProvider, $filterProvider, $provide) {
+        numeroApp.config(function($routeProvider, $controllerProvider, $compileProvider, $filterProvider, $provide) {
 
-         numeroApp.controllerProvider = $controllerProvider;
-        numeroApp.compileProvider = $compileProvider;
-        numeroApp.routeProvider = $routeProvider;
-        numeroApp.filterProvider = $filterProvider;
-        numeroApp.provide = $provide;
+     
 
-       
+        $routeProvider.when('/home', {
+            templateUrl: 'views/home.html',
+            controller: 'homeController'
+            
+        
+        });
+        $routeProvider.otherwise({
+            redirectTo: '/home'
+             });
+        });
+         return numeroApp;
     });
-    return numeroApp;
+  
 
     
-});
