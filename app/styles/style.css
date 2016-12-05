@@ -3,7 +3,7 @@
 
 
 body {
-    background: url(../images/background.jpg) no-repeat;
+   background: url(../images/background.jpg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: 50% 50%;
@@ -116,7 +116,7 @@ fieldset[disabled] .btn-primary.active {
 
 .logo h1 {
     font-family: 'Lobster', cursive;
-    color: #fff;
+    color: #C9302C;
     font-size: 60px;
 }
 
@@ -955,5 +955,14 @@ and (max-width : 991px) {
 .testimonial .speech {
     background: #FF432E;
     padding: 20px;
+    color: #fff;
+}
+.espacios
+{
+    color:#fff;
+    padding-left: 20px;
+}
+.title
+{
     color: #fff;
 }

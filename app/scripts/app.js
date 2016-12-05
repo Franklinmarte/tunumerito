@@ -53,8 +53,9 @@ define('numeroApp', ['angular', 'angular-route', 'homeController'], function(ang
         $routeProvider.when('/home', {
             templateUrl: 'views/home.html',
             controller: 'homeController'
-            
-        
+         }).
+        when('/home/numerouno',{
+          templateUrl: 'views/numerouno.html'
         });
         $routeProvider.otherwise({
             redirectTo: '/home'
