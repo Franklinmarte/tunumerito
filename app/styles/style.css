@@ -22,27 +22,21 @@ ul,ol {
     margin: 0;
     padding: 0;
 }
-
 li {
     list-style: none;
 }
-
 a {
     color: #FF432E;
     text-decoration: none;
 }
-
 a:hover {
     text-decoration: none;
 }
-
 p {
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     line-height: 21px;
 }
-
-
 .btn-primary {
     border-color: #FF432E;
     background-color: #FF432E;
@@ -58,7 +52,6 @@ p {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
@@ -87,10 +80,7 @@ fieldset[disabled] .btn-primary.active {
     border-color: #FF432E;
     background-color: #FF432E;
 }
-
-
 /**** Start Section Title Section ****/
-
 .section-title h3{
     color: #666 !important;
     //font-style: italic;
@@ -98,7 +88,6 @@ fieldset[disabled] .btn-primary.active {
     font-family: 'Oswald', sans-serif;
     text-transform: none;
 }
-
 .section-title p {
     padding-bottom: 60px;
     color: #999;
@@ -965,4 +954,8 @@ and (max-width : 991px) {
 .title
 {
     color: #fff;
+}
+.blanco
+{
+    background-color: #fff;
 }
