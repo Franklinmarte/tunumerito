@@ -242,7 +242,7 @@ and (max-width : 1199px) {
 }
 
 .home-slider .carousel-indicators .active {
-	background-color: #FF432E;
+	background-color: ;
 }
 
 
@@ -948,14 +948,18 @@ and (max-width : 991px) {
 }
 .espacios
 {
-    color:#fff;
+    color:#C9302C;
     padding-left: 20px;
 }
 .title
 {
-    color: #fff;
+    color: #C9302C;
 }
 .blanco
 {
     background-color: #fff;
+}
+.numerosuerte
+{
+    font-size: 150px;
 }
