@@ -1,4 +1,4 @@
- <div class="mainbody-section text-center">
+ <div class="mainbody-section text-center" ng-controller="conteoCtrl">
             <div class="container">
                 <div class="row">
                     
@@ -6,46 +6,48 @@
                         
                         <!-- Start Carousel Section -->
                         <div class="home-slider">
-                           <form>
-                           	<label class="title">Nombre</label>
-                           	<input type="text" name="nombre" class="form-control">
-                           	<p><label class="title">Signo Zodiacal</label></p>
-                           	<label class="espacios">
-                           	<input type="radio" name="zodiacal" value="aries">Aries
-                           	</label>
-                           	<label class="espacios">
-                           	<input type="radio" name="zodiacal" value="tauro">Tauro
-                           	</label>
-                           	<label class="espacios">
-                           	<input type="radio" name="zodiacal" value="geminis">Geminis
-                           	</label>
-                           	<label class="espacios">
-                           	<input type="radio" name="zodiacal" value="cancer">Cancer
-                           	</label>
-                           	<label class="espacios">
-                           	<input type="radio" name="zodiacal" value="leo">Leo
-                           	</label>
-                           	<label class="espacios">
-                           	<input type="radio" name="zodiacal" value="virgo">Virgo
-                           	</label>
-                           	<label class="espacios">
-                           	<input type="radio" name="zodiacal" value="libra">Libra
-                           	</label>	
-                           	<label class="espacios">
-                           	<input type="radio" name="zodiacal" value="escorpio">Escorpio
-                           	</label>
-                           	<label class="espacios">
-                           	<input type="radio" name="zodiacal" value="sagitario">Sagitario
-                           	</label>
-                           	<label class="espacios">
-                           	<input type="radio" name="zodiacal" value="capricomio">Capricomio
-                           	</label>
-                           	<label class="espacios">
-                           	<input type="radio" name="zodiacal" value="acuario">Acuario
-                           	</label>
-                           	<label class="espacios">
-                           	<input type="radio" name="zodiacal" value="piscis">Piscis
-					             		</label>
+                         <form role="form" ng-submit="addTarea()">
+                          <div class="row">
+                            <div class="input-group">
+                              <input type="text" ng-model="tarea" placeholder="Nombre" class="form-control">
+                             
+                            <p><label class="title">Signo Zodiacal</label></p>
+                            <label class="espacios">
+                            <input type="radio" ng-model="zodiacal.name" value="aries">Aries
+                            </label>
+                            <label class="espacios">
+                            <input type="radio" ng-model="zodiacal.name" value="tauro">Tauro
+                            </label>
+                            <label class="espacios">
+                            <input type="radio" ng-model="zodiacal.name" value="geminis">Geminis
+                            </label>
+                            <label class="espacios">
+                            <input type="radio" ng-model="zodiacal.name" value="cancer">Cancer
+                            </label>
+                            <label class="espacios">
+                            <input type="radio" ng-model="zodiacal.name" value="leo">Leo
+                            </label>
+                            <label class="espacios">
+                            <input type="radio" ng-model="zodiacal.name" value="virgo">Virgo
+                            </label>
+                            <label class="espacios">
+                            <input type="radio" ng-model="zodiacal.name" value="libra">Libra
+                            </label>  
+                            <label class="espacios">
+                            <input type="radio" ng-model="zodiacal.name" value="escorpio">Escorpio
+                            </label>
+                            <label class="espacios">
+                            <input type="radio" ng-model="zodiacal.name" value="sagitario">Sagitario
+                            </label>
+                            <label class="espacios">
+                            <input type="radio" ng-model="zodiacal.name" value="capricomio">Capricomio
+                            </label>
+                            <label class="espacios">
+                            <input type="radio" ng-model="zodiacal.name" value="acuario">Acuario
+                            </label>
+                            <label class="espacios">
+                            <input type="radio" ng-model="zodiacal.name" value="piscis">Piscis
+                          </label>
                           <br>
                           <br>
 
@@ -54,8 +56,20 @@
                           <input type="date" ng-model="valueofdate" />
                           <br>
                           <br>
-                          <a href="#/home/generaruno" class="btn btn-danger"> General Numero De La Suerte</a>
-                      </form>
+
+                            </div>
+                          </div>
+                          <input class="btn btn-danger" type="submit" name="boton" value="Voy a tener suerte">
+                        </form>
+                  <!--      <p class="input-group"  style="padding:5px 10px; cursor: move;">
+                          {{tareas[0]}}
+
+                          
+                          <span class="input-group-btn">
+                            <button class="btn btn-danger" ng-click="eliminarTarea($index)" aria-label="Eliminar">X</button>
+                          </span>
+                        </p>
+                            -->                             
                         </div>
                         <!-- Start Carousel Section -->
                         
@@ -82,7 +96,7 @@
                             </a>
                         </div>
                          <div class="menu-item green">
-                          <a href="#/home" align="center">
+                          <a href="#/home/generaruno" align="center">
                            <img src="images/back.png"><br>
                            Atras
                           </a>  

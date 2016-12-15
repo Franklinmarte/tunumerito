@@ -1,7 +1,10 @@
 'use strict';
 
 
-    var numeroApp = angular.module('numeroApp', ['ngRoute','numeroAppController']);
+    var numeroApp = angular.module('numeroApp', ['ngRoute','LocalStorageModule','numeroAppController']);
+    numeroApp .config(['localStorageServiceProvider', function(localStorageServiceProvider){
+    localStorageServiceProvider.setPrefix('ls');
+  }]);
     numeroApp.config(['$routeProvider',function($routeProvider){
 
 
