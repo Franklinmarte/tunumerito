@@ -3,11 +3,9 @@
 
 
 body {
-   background: url(../images/background.jpg) no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: 50% 50%;
-    font-family: 'Open Sans', sans-serif;
+    background: #fac907
+    url(../images/background2.jpg) center top no-repeat;
+}
 }
 
 a,
@@ -962,4 +960,19 @@ and (max-width : 991px) {
 .numerosuerte
 {
     font-size: 150px;
+}
+footer {
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  margin-top: 50px;
+  background-color: #0150A3;
+  text-align: center;
+  font-weight: bold;
+}
+.azul
+{
+    background-color: #0150A3
 }

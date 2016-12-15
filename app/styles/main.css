@@ -7,7 +7,7 @@
 
 body {
   padding: 0;
-}
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -80,4 +80,13 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
 }

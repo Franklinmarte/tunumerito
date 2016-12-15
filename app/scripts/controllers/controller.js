@@ -13,12 +13,29 @@ numeroApp.controller('conteoCtrl',['$scope','$location','localStorageService',fu
 
     $scope.addTarea = function () {
       
-    	$scope.numero = Math.floor((Math.random() * 100) + 1);
-      debugger
-      $scope.tareas.push($scope.tarea, $scope.zodiacal.name, $scope.numero, dia);
+   if ($scope.tareas[4]==dia) {
+    
+      location=("#/home/generaruno");
+   }else
+   {
+       delete $scope.tareas[0];
+      delete $scope.tareas[1];
+      delete $scope.tareas[2];
+      delete $scope.tareas[3];
+
+      
+     $scope.numero = Math.floor((Math.random() * 100) + 1);
+      
+    //  $scope.tareas.push($scope.tarea, $scope.zodiacal.name, $scope.numero, dia);
+      $scope.tareas[0] = $scope.tarea;
+      $scope.tareas[1]= $scope.numero;
+      $scope.tareas[2]=$scope.numero;
+      $scope.tareas[3]= dia;
       $scope.tarea = '';
        location=("#/home/generaruno");
+   }
      
+    
     
     };
     $scope.eliminarTarea = function (index) {
