@@ -11,7 +11,7 @@ numeroApp.controller('conteoCtrl',['$scope','$location','localStorageService',fu
      var fecha = new Date();
      var dia = fecha.getDay()
 
-    $scope.addTarea = function () {
+    $scope.a = function () {
       
    if ($scope.tareas[4]==dia) {
     
@@ -38,10 +38,50 @@ numeroApp.controller('conteoCtrl',['$scope','$location','localStorageService',fu
     
     
     };
-    $scope.eliminarTarea = function (index) {
-      $scope.tareas.splice(index, 1);
-    };    
-	
+  
+
+}]);
+
+numeroApp.controller('conteoDos',['$scope','$location','localStorageService',function($scope,$location,localStorageService){
+   var tareasdos = localStorageService.get('dos'); 
+    $scope.dos = tareasdos && tareasdos.split('\n') || [];
+    $scope.$watch('dos', function () {
+       localStorageService.add('dos', $scope.dos.join('\n'));
+       }, true);
+
+ var fecha_dos = new Date();
+     var dia_dos = fecha_dos.getDay()
+
+    $scope.b = function () {
+      
+   if ($scope.dos[4]==dia_dos) {
+    
+      location=("#/home/generados");
+   }else
+
+{
+       delete $scope.dos[0];
+      delete $scope.dos[1];
+      delete $scope.dos[2];
+      delete $scope.dos[3];
+
+      
+     $scope.numero = Math.floor((Math.random() * 100) + 1);
+     $scope.numero_dos = Math.floor((Math.random() * 100) + 1);
+      
+    //  $scope.tareas.push($scope.tarea, $scope.zodiacal.name, $scope.numero, dia);
+      $scope.dos[0] = $scope.nombre;
+      $scope.dos[1]= $scope.numero;
+      $scope.dos[2]=$scope.numero_dos;
+      $scope.dos[3]= dia_dos;
+      $scope.nombre = '';
+       location=("#/home/generados");
+   }
+     
+    
+    
+}
+    
 
 }])
 

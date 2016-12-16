@@ -20,6 +20,11 @@
          when('/home/generaruno',{
           templateUrl: 'views/generaruno.html',
           
+        }).when('/home/numerodos',{
+          templateUrl: 'views/numerodos.html'
+        }).when('/home/generados',{
+          templateUrl: 'views/generados.html',
+          
         });
         $routeProvider.otherwise({
             redirectTo: '/home'
