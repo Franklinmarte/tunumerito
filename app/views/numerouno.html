@@ -6,10 +6,10 @@
                         
                         <!-- Start Carousel Section -->
                         <div class="home-slider">
-                         <form role="form" ng-submit="addTarea()">
+                         <form role="form" name="numerouno" ng-submit="addTarea()">
                           <div class="row">
                             <div class="input-group">
-                              <input type="text" ng-model="tarea" placeholder="Nombre" class="form-control">
+                              <input type="text" name="nombre" required ng-model="tarea" placeholder="Nombre" class="form-control" ng-class='{ error: numerouno.nombre.$invalid && !numerouno.$pristine }'>
                              
                             <p><label class="title">Signo Zodiacal</label></p>
                             <label class="espacios">
@@ -53,13 +53,13 @@
 
 
                           <label class="title">Fecha de nacimiento</label>
-                          <input type="date" ng-model="valueofdate" />
+                          <input type="date" name="fecha" required ng-model="valueofdate"  ng-class='{ error: numerouno.fecha.$invalid && !numerouno.$pristine }' />
                           <br>
                           <br>
 
                             </div>
                           </div>
-                          <input class="btn btn-danger" type="submit" name="boton" value="Voy a tener suerte">
+                          <input ng-disabled='!numerouno.$valid' class="btn btn-danger" type="submit" name="boton" value="Voy a tener suerte">
                         </form>
                   <!--      <p class="input-group"  style="padding:5px 10px; cursor: move;">
                           {{tareas[0]}}
@@ -71,6 +71,7 @@
                         </p>
                             -->                             
                         </div>
+                      <p>Si quieres que la suerte siempre este contigo no te mientas a ti mismo y introduce correctamente todos los datos</p>
                         <!-- Start Carousel Section -->
                         
                         <div class="row">
@@ -88,15 +89,15 @@
                     
                     <div class="col-md-3">
                         
-                         <div class="menu-item azul">
+                         <div class="menu-item blue">
                             <a href="#home/signozodiacal" data-toggle="modal">
                               <img src="images/signo.png">
                                 <p>Descrubre tu signo zodiacal</p>
                               
                             </a>
                         </div>
-                         <div class="menu-item azul">
-                          <a href="#/home/generaruno" align="center">
+                         <div class="menu-item blue">
+                          <a href="#/home" align="center">
                            <img src="images/back.png"><br>
                            Atras
                           </a>  

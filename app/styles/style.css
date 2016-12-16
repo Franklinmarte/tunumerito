@@ -971,8 +971,18 @@ footer {
   background-color: #0150A3;
   text-align: center;
   font-weight: bold;
+   color:#fff !important;
 }
 .azul
 {
     background-color: #0150A3
+}
+/* Styles go here */
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
 }

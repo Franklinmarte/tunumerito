@@ -89,4 +89,14 @@ footer {
   padding: 1rem;
   background-color: #efefef;
   text-align: center;
+ 
+}
+/* Styles go here */
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
 }
