@@ -15,7 +15,8 @@
     "angular-sanitize": "^1.4.0",
     "angular-touch": "^1.4.0",
     "requirejs": "2.1.x",
-    "requirejs-text": "2.0.x"
+    "requirejs-text": "2.0.x",
+    "Local Storage"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"

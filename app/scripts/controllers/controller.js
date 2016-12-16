@@ -7,7 +7,10 @@ numeroApp.controller('conteoCtrl',['$scope','$location','localStorageService',fu
     $scope.$watch('tareas', function () {
        localStorageService.add('tareas', $scope.tareas.join('\n'));
        }, true);
-
+    $scope.atras=function()
+    {
+      window.history.back();
+    }
      var fecha = new Date();
      var dia = fecha.getDay()
 
