@@ -18,11 +18,12 @@
           templateUrl: 'views/signozodiacal.html'
         }).
          when('/home/generaruno',{
-          templateUrl: 'views/generaruno.html',
-          
-        }).when('/home/numerodos',{
+          templateUrl: 'views/generaruno.html',    
+        }).
+         when('/home/numerodos',{
           templateUrl: 'views/numerodos.html'
-        }).when('/home/generados',{
+        }).
+         when('/home/generados',{
           templateUrl: 'views/generados.html',
           
         });

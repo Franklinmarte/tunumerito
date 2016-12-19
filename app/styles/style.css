@@ -986,3 +986,23 @@ footer {
 .warning {
   border-color: yellow;
 }
+ .numero
+                      {
+                        list-style: none;
+                    color: #38393a;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 56px;
+                    margin: 0 15px 0 0;
+                    float: left;
+                    text-align: center;
+                    border-radius: 50%;
+                    border: 1px solid #EEE;
+                    padding: 0 10px;
+                    min-width: 37px;
+                    background: #efefef;
+                    background: -moz-linear-gradient(top,rgba(239,239,239,1) 0,rgba(255,255,255,1) 50%,rgba(242,242,242,1) 51%,rgba(255,255,255,1) 100%);
+                    background: -webkit-linear-gradient(top,rgba(239,239,239,1) 0,rgba(255,255,255,1) 50%,rgba(242,242,242,1) 51%,rgba(255,255,255,1) 100%);
+                    background: linear-gradient(to bottom,rgba(239,239,239,1) 0,rgba(255,255,255,1) 50%,rgba(242,242,242,1) 51%,rgba(255,255,255,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#ffffff', GradientType=0 );
+                      }
