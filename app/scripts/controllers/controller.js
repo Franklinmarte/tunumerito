@@ -81,10 +81,28 @@ numeroApp.controller('conteoDos',['$scope','$location','localStorageService',fun
        location=("#/home/generados");
    }
      
-    
-    
-}
-    
+        
+} 
+}])
+numeroApp.controller('importarCtrl', ['$scope','$http',function($scope,$http){
+  $scope.leidsa = function()
+  {
+      $http.get('config/leidsa.php').success(function(datos){
+      $scope.quiniela = datos
+
+      });
+  }
+  $scope.leidsa();
+  $scope.nacional = function()
+  {
+      $http.get('config/nacional.php').success(function(datos){
+      $scope.nacional = datos
+
+      });
+  }
+  $scope.nacional();
+
+
 
 }])
 

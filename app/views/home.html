@@ -1,4 +1,4 @@
- <div class="mainbody-section text-center">
+ <div class="mainbody-section text-center" ng-controller="importarCtrl"> 
             <div class="container">
                 <div class="row">
                      <div class="col-md-7">
@@ -6,14 +6,14 @@
                         <div class="menu-item blue">
                             <a href="#home/numerouno" data-toggle="modal">
                               <img src="images/1.png">
-                                <p>Un Numero Del 1 Al 100</p>
+                                <p>Un Numero Del 00 Al 99</p>
                                 
                             </a>
                         </div>
                           <div class="menu-item light-red">
                             <a href="#home/numerodos" data-toggle="modal">
                                 <img src="images/2.png">
-                                <p>Pale. Dos Numeros Del 1 Al 100</p>
+                                <p>Pale. Dos Numeros Del 00 Al 99</p>
                             </a>
                         </div>
                                
@@ -22,21 +22,30 @@
                 </div>     
                     <div class="col-md-5">
                      <div class="col-md-12">
-                        <li><h3>Numeros Ganadores Loteria Quiniela</h3></li>
-                        <li class="numero">85</li>                         
-                        <li class="numero">03</li>
-                        <li class="numero">54</li>                         
+                        
+                        <div ng-repeat="leidsa in quiniela">
+                  
+                        <p><h3>Numeros Ganadores Loteria Quiniela </h3> {{leidsa.fecha}}</p>
+                        
+                          <li class="numero">{{leidsa.primera}}</li>
+                          <li class="numero">{{leidsa.segunda}}</li>
+                          <li class="numero">{{leidsa.tercera}}</li>
+                        </div>                     
                      </div>
 
                       <div class="col-md-12">
-                      <h3>Numeros Ganadores Loteria Nacional</h3>
-                        <li class="numero">78</li>                         
-                        <li class="numero">25</li>
-                        <li class="numero">35</li>                         
+                      <div ng-repeat="nacional in nacional">
+                      <span> </span>
+                        <p><h3>Numeros Ganadores Loteria Nacional</h3>{{nacional.fecha}}</p>
+                        
+                          <li class="numero">{{nacional.primera}}</li>
+                          <li class="numero">{{nacional.segunda}}</li>
+                          <li class="numero">{{nacional.tercera}}</li>
+                        </div>                                       
                      </div>
 
                  </div>
-
+                 
 
                   <style type="text/css">
                      
