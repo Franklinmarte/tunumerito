@@ -2,12 +2,10 @@
             <div class="container">
                 <div class="row">
                      <div class="col-md-7">
-                
                         <div class="menu-item blue">
                             <a href="#home/numerouno" data-toggle="modal">
                               <img src="images/1.png">
-                                <p>Un Numero Del 00 Al 99</p>
-                                
+                                <p>Un Numero Del 00 Al 99</p>    
                             </a>
                         </div>
                           <div class="menu-item light-red">
@@ -16,40 +14,47 @@
                                 <p>Pale. Dos Numeros Del 00 Al 99</p>
                             </a>
                         </div>
-                               
-
-
                 </div>     
                     <div class="col-md-5">
-                     <div class="col-md-12">
+                     <div class="col-md-12 dganadores">
                         
                         <div ng-repeat="leidsa in quiniela">
                   
-                        <p><h3>Numeros Ganadores Loteria Quiniela </h3> {{leidsa.fecha}}</p>
+                          <div class="titulo">
+                          Numeros Ganadores Loteria Quiniela {{leidsa.fecha}}
+                          <img src="images/leidsa1.png" width="50">
+                          </div>
+                            <br>
                         
-                          <li class="numero">{{leidsa.primera}}</li>
-                          <li class="numero">{{leidsa.segunda}}</li>
-                          <li class="numero">{{leidsa.tercera}}</li>
+                            <div class="col-md-8">
+                              <li class="numero">{{leidsa.primera}}</li>
+                            <li class="numero">{{leidsa.segunda}}</li>
+                            <li class="numero">{{leidsa.tercera}}</li>
+                            </div>
+                             <div class="col-md-4">
+                              
+                            </div>
                         </div>                     
                      </div>
 
-                      <div class="col-md-12">
+                      <div class="col-md-12 dganadores" >
                       <div ng-repeat="nacional in nacional">
-                      <span> </span>
-                        <p><h3>Numeros Ganadores Loteria Nacional</h3>{{nacional.fecha}}</p>
-                        
-                          <li class="numero">{{nacional.primera}}</li>
+                          <div class="titulo">
+                            Numeros Ganadores Loteria Nacional {{nacional.fecha}}    
+                                     <img src="images/lotonacional.png" width="100">
+                          </div>
+                          <br>
+                          <div class="col-md-8">
+                            <li class="numero">{{nacional.primera}}</li>
                           <li class="numero">{{nacional.segunda}}</li>
                           <li class="numero">{{nacional.tercera}}</li>
+                          </div>
+                          <div class="col-md-3">
+                   
+                          </div>
                         </div>                                       
                      </div>
-
                  </div>
-                 
-
-                  <style type="text/css">
-                     
-                  </style>
                 </div>
             </div>
         </div>

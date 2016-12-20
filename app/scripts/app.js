@@ -18,14 +18,16 @@
           templateUrl: 'views/signozodiacal.html'
         }).
          when('/home/generaruno',{
-          templateUrl: 'views/generaruno.html',    
+          templateUrl: 'views/generaruno.html'   
         }).
          when('/home/numerodos',{
           templateUrl: 'views/numerodos.html'
         }).
          when('/home/generados',{
-          templateUrl: 'views/generados.html',
+          templateUrl: 'views/generados.html'
           
+        }).when('/home/terminosycondiciones',{
+          templateUrl: 'views/terminosycondiciones.html'
         });
         $routeProvider.otherwise({
             redirectTo: '/home'
