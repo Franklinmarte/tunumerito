@@ -1,7 +1,7 @@
-'use strict'; 
+ 'use strict'; 
 var numeroApp = angular.module('numeroAppController',[]);
 
-numeroApp.controller('conteoCtrl',['$scope','$location','localStorageService',function($scope,$location,localStorageService){
+numeroApp.controller('conteoCtrl',['$scope','$location','localStorageService','$http',function($scope,$location,localStorageService,$http){
 	 var tareasEnAlmacen = localStorageService.get('tareas'); 
     $scope.tareas = tareasEnAlmacen && tareasEnAlmacen.split('\n') || [];
     $scope.$watch('tareas', function () {
@@ -16,11 +16,14 @@ numeroApp.controller('conteoCtrl',['$scope','$location','localStorageService',fu
 
     $scope.a = function () {
       
-   if ($scope.tareas[4]==dia) {
+   if ($scope.tareas[3]==dia) {
     
       location=("#/home/generaruno");
    }else
    {
+  
+      
+    
        delete $scope.tareas[0];
       delete $scope.tareas[1];
       delete $scope.tareas[2];
@@ -34,7 +37,13 @@ numeroApp.controller('conteoCtrl',['$scope','$location','localStorageService',fu
       $scope.tareas[1]= $scope.numero;
       $scope.tareas[2]=$scope.numero;
       $scope.tareas[3]= dia;
-      $scope.tarea = '';
+      
+      
+        $http.post("config/insertar.php",{'nombre':$scope.tarea,'signo':$scope.zodiacal.name,'fecha':$scope.valueofdate,'numero':$scope.numero})
+                    .success(function(data,status,headers,config){
+                        console.log("data insert succesfully");
+         $scope.tarea = '';
+     });
        location=("#/home/generaruno");
    }
      
