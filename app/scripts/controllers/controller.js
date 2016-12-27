@@ -37,24 +37,23 @@ numeroApp.controller('conteoCtrl',['$scope','$location','localStorageService','$
       $scope.tareas[1]= $scope.numero;
       $scope.tareas[2]=$scope.numero;
       $scope.tareas[3]= dia;
-      
-      
-        $http.post("config/insertar.php",{'nombre':$scope.tarea,'signo':$scope.zodiacal.name,'fecha':$scope.valueofdate,'numero':$scope.numero})
-                    .success(function(data,status,headers,config){
-                        console.log("data insert succesfully");
-         $scope.tarea = '';
-     });
-       location=("#/home/generaruno");
+      $http.post("config/insertar.php",{
+      'nombre':$scope.tarea,
+      'signo':$scope.zodiacal.name,
+      'fecha':$scope.valueofdate,
+      'numero':$scope.numero
+      }).success(function(data,status,headers,config){
+            console.log("data insert succesfully");
+       });
+      $scope.tarea = '';
+      location=("#/home/generaruno");
    }
-     
-    
-    
-    };
+   };
   
 
 }]);
 
-numeroApp.controller('conteoDos',['$scope','$location','localStorageService',function($scope,$location,localStorageService){
+numeroApp.controller('conteoDos',['$scope','$location','localStorageService','$http',function($scope,$location,localStorageService,$http){
    var tareasdos = localStorageService.get('dos'); 
     $scope.dos = tareasdos && tareasdos.split('\n') || [];
     $scope.$watch('dos', function () {
@@ -66,9 +65,10 @@ numeroApp.controller('conteoDos',['$scope','$location','localStorageService',fun
 
     $scope.b = function () {
       
-   if ($scope.dos[4]==dia_dos) {
+   if ($scope.dos[3]==dia_dos) {
     
       location=("#/home/generados");
+      debugger
    }else
 
 {
@@ -81,11 +81,22 @@ numeroApp.controller('conteoDos',['$scope','$location','localStorageService',fun
      $scope.numero = Math.floor((Math.random() * 100) + 1);
      $scope.numero_dos = Math.floor((Math.random() * 100) + 1);
       
-    //  $scope.tareas.push($scope.tarea, $scope.zodiacal.name, $scope.numero, dia);
+    
       $scope.dos[0] = $scope.nombre;
       $scope.dos[1]= $scope.numero;
       $scope.dos[2]=$scope.numero_dos;
       $scope.dos[3]= dia_dos;
+       $http.post("config/insertar_pale.php",{
+      'nombre':$scope.nombre,
+      'signo':$scope.zodiacal.name,
+      'fecha':$scope.valueofdate,
+      'numero':$scope.numero,
+      'numero_dos': $scope.numero_dos
+    }).success(function(data,status,headers,config){
+            console.log("data insert succesfully");
+       
+     });
+           
       $scope.nombre = '';
        location=("#/home/generados");
    }
@@ -111,7 +122,7 @@ numeroApp.controller('importarCtrl', ['$scope','$http',function($scope,$http){
   }
   $scope.nacional();
 
-
+ 
 
 }])
 
