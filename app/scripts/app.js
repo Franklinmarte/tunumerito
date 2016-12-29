@@ -9,25 +9,25 @@
 
 
         $routeProvider.when('/home', {
-            templateUrl: 'views/home.html'
+            templateUrl: 'app/views/home.html'
          }).
         when('/home/numerouno',{
-          templateUrl: 'views/numerouno.html'
+          templateUrl: 'app/views/numerouno.html'
         }).
          when('/home/signozodiacal',{
-          templateUrl: 'views/signozodiacal.html'
+          templateUrl: 'app/views/signozodiacal.html'
         }).
          when('/home/generaruno',{
-          templateUrl: 'views/generaruno.html'   
+          templateUrl: 'app/views/generaruno.html'   
         }).
          when('/home/numerodos',{
-          templateUrl: 'views/numerodos.html'
+          templateUrl: 'app/views/numerodos.html'
         }).
          when('/home/generados',{
-          templateUrl: 'views/generados.html'
+          templateUrl: 'app/views/generados.html'
           
         }).when('/home/terminosycondiciones',{
-          templateUrl: 'views/terminosycondiciones.html'
+          templateUrl: 'app/views/terminosycondiciones.html'
         });
         $routeProvider.otherwise({
             redirectTo: '/home'

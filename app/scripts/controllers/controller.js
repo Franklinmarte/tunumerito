@@ -37,7 +37,7 @@ numeroApp.controller('conteoCtrl',['$scope','$location','localStorageService','$
       $scope.tareas[1]= $scope.numero;
       $scope.tareas[2]=$scope.numero;
       $scope.tareas[3]= dia;
-      $http.post("config/insertar.php",{
+      $http.post("app/config/insertar.php",{
       'nombre':$scope.tarea,
       'signo':$scope.zodiacal.name,
       'fecha':$scope.valueofdate,
@@ -86,7 +86,7 @@ numeroApp.controller('conteoDos',['$scope','$location','localStorageService','$h
       $scope.dos[1]= $scope.numero;
       $scope.dos[2]=$scope.numero_dos;
       $scope.dos[3]= dia_dos;
-       $http.post("config/insertar_pale.php",{
+       $http.post("app/config/insertar_pale.php",{
       'nombre':$scope.nombre,
       'signo':$scope.zodiacal.name,
       'fecha':$scope.valueofdate,
@@ -107,7 +107,7 @@ numeroApp.controller('conteoDos',['$scope','$location','localStorageService','$h
 numeroApp.controller('importarCtrl', ['$scope','$http',function($scope,$http){
   $scope.leidsa = function()
   {
-      $http.get('config/leidsa.php').success(function(datos){
+      $http.get('app/config/leidsa.php').success(function(datos){
       $scope.quiniela = datos
 
       });
@@ -115,7 +115,7 @@ numeroApp.controller('importarCtrl', ['$scope','$http',function($scope,$http){
   $scope.leidsa();
   $scope.nacional = function()
   {
-      $http.get('config/nacional.php').success(function(datos){
+      $http.get('app/config/nacional.php').success(function(datos){
       $scope.nacional = datos
 
       });
