@@ -988,6 +988,7 @@ footer {
 }
  .numero
 {
+width: 57px;
 list-style: none;
 color: #38393a;
 font-size: 24px;
@@ -1027,4 +1028,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', end
 {
     text-align: center;
     margin-left: 25%;
+}
+.numero
+{
+    width: 57PX;
 }
